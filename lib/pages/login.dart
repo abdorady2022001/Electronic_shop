@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:shop_application_1/shaerd/contants.dart';
 
 class login extends StatelessWidget {
   const login({super.key});
@@ -19,10 +20,17 @@ class login extends StatelessWidget {
               TextField(
                   keyboardType: TextInputType.emailAddress,
                   obscureText: false,
-                  decoration: ),
+                  decoration: decorationTextfield.copyWith(
+                      hintText: "Enter Your Email : ")),
               const SizedBox(
                 height: 30,
               ),
+              TextField(
+                  keyboardType: TextInputType.text,
+                  obscureText: true,
+                  decoration: decorationTextfield.copyWith(
+                    hintText: "Enter Your Password :",
+                  )),
             ],
           ),
         ),
