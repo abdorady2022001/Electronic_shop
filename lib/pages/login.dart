@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:shop_application_1/shaerd/colors.dart';
 import 'package:shop_application_1/shaerd/contants.dart';
 
 class login extends StatelessWidget {
@@ -37,7 +38,7 @@ class login extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.orange),
+                  backgroundColor: MaterialStateProperty.all(BTNgreen),
                   padding: MaterialStateProperty.all(EdgeInsets.all(12)),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8))),
