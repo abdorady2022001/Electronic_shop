@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:shop_application_1/shaerd/my_const.dart';
 
 class login extends StatelessWidget {
   const login({super.key});
@@ -16,27 +17,11 @@ class login extends StatelessWidget {
               const SizedBox(
                 height: 64,
               ),
-              TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  obscureText: false,
-                  decoration: InputDecoration(
-                    hintText: "Enter Your Email : ",
-                    // To delete borders
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: Divider.createBorderSide(context),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.grey,
-                      ),
-                    ),
-                    // fillColor: Colors.red,
-                    filled: true,
-                    contentPadding: const EdgeInsets.all(8),
-                  )),
+              MyTextfilde(),
               const SizedBox(
                 height: 30,
               ),
+              MyTextfilde(),
             ],
           ),
         ),
