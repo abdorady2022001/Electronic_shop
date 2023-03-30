@@ -44,7 +44,7 @@ class login extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8))),
                 ),
                 child: Text(
-                  "click here",
+                  "sign in",
                   style: TextStyle(fontSize: 19),
                 ),
               ),
