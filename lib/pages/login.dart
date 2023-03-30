@@ -31,6 +31,22 @@ class login extends StatelessWidget {
                   decoration: decorationTextfield.copyWith(
                     hintText: "Enter Your Password :",
                   )),
+              const SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.orange),
+                  padding: MaterialStateProperty.all(EdgeInsets.all(12)),
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8))),
+                ),
+                child: Text(
+                  "click here",
+                  style: TextStyle(fontSize: 19),
+                ),
+              ),
             ],
           ),
         ),
