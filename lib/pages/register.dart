@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:shop_application_1/shaerd/colors.dart';
 import 'package:shop_application_1/shaerd/contants.dart';
 
-class login extends StatelessWidget {
-  const login({super.key});
+class Register extends StatelessWidget {
+  const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
