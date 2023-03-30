@@ -3,8 +3,15 @@
 import 'package:flutter/material.dart';
 
 class MyTextfilde extends StatelessWidget {
-  const MyTextfilde({super.key});
+          final  TextInputType TextInputTypee;
+           final bool  ispassword;
+           final  String hinttexttt;
+MyTextfilde({Key?key, 
+  required this.TextInputTypee,
+    required this.ispassword,
+  required this.hinttexttt,
 
+})
   @override
   Widget build(BuildContext context) {
     return TextField(
