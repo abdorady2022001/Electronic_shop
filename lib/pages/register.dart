@@ -9,7 +9,9 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold,
+      child: Scaffold(
+        backgroundColor: Color.fromARGB(255, 247, 247, 247),
+      ),
     );
   }
 }
