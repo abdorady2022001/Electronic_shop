@@ -1,7 +1,26 @@
 import 'package:flutter/material.dart';
 
+class Item {
+  String imgpath;
+  double price;
+  Item({required this.imgpath, required this.price});
+}
+
 class Home extends StatelessWidget {
-  const Home({super.key});
+  final List<Item> items = [
+    Item(imgpath: "assets/img/s1.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s6.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s2.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s7.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s3.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s8.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s4.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s9.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s5.jpg", price: 10.99),
+    Item(imgpath: "assets/img/s10.jpg", price: 10.99),
+  ];
+
+  Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +33,7 @@ class Home extends StatelessWidget {
                 childAspectRatio: 3 / 3,
                 crossAxisSpacing: 3,
                 mainAxisSpacing: 33),
-            itemCount: 10,
+            itemCount: items.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
                 onTap: () {},
@@ -27,7 +46,7 @@ class Home extends StatelessWidget {
                       left: 0,
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(80),
-                          child: Image.asset("assets/img/s3.jpg")),
+                          child: Image.asset(items[index].imgpath)),
                     ),
                   ]),
                   footer: GridTileBar(
@@ -38,7 +57,7 @@ class Home extends StatelessWidget {
                         icon: Icon(Icons.add)),
                     leading: Text("\$12.99"),
                     title: Text(
-                      "",
+                      "       الاسم   ",
                     ),
                   ),
                 ),
