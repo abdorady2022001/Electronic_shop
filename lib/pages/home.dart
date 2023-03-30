@@ -6,6 +6,25 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+          child: Column(
+        children: [
+          UserAccountsDrawerHeader(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/img/a2.jpg"), fit: BoxFit.cover),
+            ),
+            accountName: Text("Abdelrhman",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 255, 255, 255),
+                )),
+            accountEmail: Text("abdo@yahoo.com"),
+            currentAccountPictureSize: Size.square(85),
+            currentAccountPicture: CircleAvatar(
+                radius: 55, backgroundImage: AssetImage("assets/img/a1.jpg")),
+          ),
+        ],
+      )),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 76, 141, 95),
         title: Text("Home"),
