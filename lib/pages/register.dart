@@ -22,6 +22,15 @@ class Register extends StatelessWidget {
                   height: 64,
                 ),
                 TextField(
+                    keyboardType: TextInputType.text,
+                    obscureText: false,
+                    decoration: decorationTextfield.copyWith(
+                      hintText: "Enter Your username : ",
+                    )),
+                const SizedBox(
+                  height: 30,
+                ),
+                TextField(
                     keyboardType: TextInputType.emailAddress,
                     obscureText: false,
                     decoration: decorationTextfield.copyWith(
