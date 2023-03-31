@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:shop_application_1/model/item.dart';
 import 'package:shop_application_1/pages/details_screen.dart';
 import 'package:shop_application_1/provider/cart.dart';
+import 'package:shop_application_1/shaerd/appbar.dart';
 import 'package:shop_application_1/shaerd/colors.dart';
 
 class Home extends StatelessWidget {
@@ -45,14 +46,16 @@ class Home extends StatelessWidget {
                       ),
                     ]),
                     footer: GridTileBar(
-                      backgroundColor: Color.fromARGB(66, 73, 127, 110),
+// backgroundColor: Color.fromARGB(66, 73, 127, 110),
                       trailing: IconButton(
                           color: Color.fromARGB(255, 62, 94, 70),
                           onPressed: () {
                             Carttt.add(items[index]);
                           },
                           icon: Icon(Icons.add)),
+
                       leading: Text("\$12.99"),
+
                       title: Text(
                         "",
                       ),
@@ -109,41 +112,7 @@ class Home extends StatelessWidget {
           ),
         ),
         appBar: AppBar(
-          actions: [
-            Row(
-              children: [
-                Stack(
-                  children: [
-                    Positioned(
-                      bottom: 24,
-                      child: Container(
-                          child: Text(
-                            "${Carttt.selectedProducts.length}",
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Color.fromARGB(255, 0, 0, 0)),
-                          ),
-                          padding: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(211, 164, 255, 193),
-                              shape: BoxShape.circle)),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.add_shopping_cart),
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 12),
-                  child: Text(
-                    "\$ ${Carttt.price}",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
-              ],
-            ),
-          ],
+          actions: [ProductsAndPrice()],
           backgroundColor: appbarGreen,
           title: Text("Home"),
         ));
