@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:shop_application_1/pages/checkout.dart';
 import 'package:shop_application_1/pages/details_screen.dart';

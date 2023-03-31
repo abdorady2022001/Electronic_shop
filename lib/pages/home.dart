@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_application_1/model/item.dart';
@@ -11,7 +13,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Carttt = Provider.of<Cart>(context);
+    final carttt = Provider.of<Cart>(context);
 
     return Scaffold(
         body: Padding(
@@ -46,16 +48,14 @@ class Home extends StatelessWidget {
                       ),
                     ]),
                     footer: GridTileBar(
-// backgroundColor: Color.fromARGB(66, 73, 127, 110),
+                      backgroundColor: Color.fromARGB(66, 73, 127, 110),
                       trailing: IconButton(
                           color: Color.fromARGB(255, 62, 94, 70),
                           onPressed: () {
-                            Carttt.add(items[index]);
+                            carttt.add(items[index]);
                           },
                           icon: Icon(Icons.add)),
-
                       leading: Text("\$12.99"),
-
                       title: Text(
                         "",
                       ),

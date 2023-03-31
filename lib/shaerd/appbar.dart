@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_application_1/pages/checkout.dart';
@@ -8,7 +10,7 @@ class ProductsAndPrice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Carttt = Provider.of<Cart>(context);
+    final carttt = Provider.of<Cart>(context);
     return Row(
       children: [
         Stack(
@@ -16,15 +18,15 @@ class ProductsAndPrice extends StatelessWidget {
             Positioned(
               bottom: 24,
               child: Container(
-                  child: Text(
-                    "${Carttt.selectedProducts.length}",
-                    style: TextStyle(
-                        fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)),
-                  ),
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       color: Color.fromARGB(211, 164, 255, 193),
-                      shape: BoxShape.circle)),
+                      shape: BoxShape.circle),
+                  child: Text(
+                    "${carttt.selectedProducts.length}",
+                    style: TextStyle(
+                        fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)),
+                  )),
             ),
             IconButton(
               onPressed: () {
@@ -42,7 +44,7 @@ class ProductsAndPrice extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 12),
           child: Text(
-            "\$ ${Carttt.price}",
+            "\$ ${carttt.price}",
             style: TextStyle(fontSize: 18),
           ),
         ),
