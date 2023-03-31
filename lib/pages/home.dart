@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_application_1/model/item.dart';
 import 'package:shop_application_1/pages/details_screen.dart';
+import 'package:shop_application_1/provider/cart.dart';
 import 'package:shop_application_1/shaerd/colors.dart';
 
 class Home extends StatelessWidget {
@@ -8,6 +10,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Carttt = Provider.of<Cart>(context);
+
     return Scaffold(
         body: Padding(
           padding: const EdgeInsets.only(top: 22),
@@ -41,14 +45,14 @@ class Home extends StatelessWidget {
                       ),
                     ]),
                     footer: GridTileBar(
-// backgroundColor: Color.fromARGB(66, 73, 127, 110),
+                      backgroundColor: Color.fromARGB(66, 73, 127, 110),
                       trailing: IconButton(
                           color: Color.fromARGB(255, 62, 94, 70),
-                          onPressed: () {},
+                          onPressed: () {
+                            Carttt.add(items[index]);
+                          },
                           icon: Icon(Icons.add)),
-
                       leading: Text("\$12.99"),
-
                       title: Text(
                         "",
                       ),
@@ -114,7 +118,7 @@ class Home extends StatelessWidget {
                       bottom: 24,
                       child: Container(
                           child: Text(
-                            "0",
+                            "${Carttt.selectedProducts.length}",
                             style: TextStyle(
                                 fontSize: 16,
                                 color: Color.fromARGB(255, 0, 0, 0)),
@@ -133,7 +137,7 @@ class Home extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 12),
                   child: Text(
-                    "\$ 0",
+                    "\$ ${Carttt.price}",
                     style: TextStyle(fontSize: 18),
                   ),
                 ),
