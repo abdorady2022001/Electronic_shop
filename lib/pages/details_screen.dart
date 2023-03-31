@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:shop_application_1/model/item.dart';
 import 'package:shop_application_1/shaerd/colors.dart';
 
 class Details extends StatefulWidget {
+  Item product;
+  Details({required this.product});
+
   @override
   State<Details> createState() => _DetailsState();
 }
@@ -55,10 +59,7 @@ class _DetailsState extends State<Details> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 8,
-              ),
-              Image.asset("assets/img/s4.jpg"),
+              Image.asset(widget.product.imgpath),
               SizedBox(
                 height: 15,
               ),

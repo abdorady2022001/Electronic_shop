@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_application_1/model/item.dart';
+import 'package:shop_application_1/pages/details_screen.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -18,7 +19,14 @@ class Home extends StatelessWidget {
             itemCount: items.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Details(product: items[index]),
+                    ),
+                  );
+                },
                 child: GridTile(
                   child: Stack(children: [
                     Positioned(
