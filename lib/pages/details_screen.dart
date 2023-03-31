@@ -64,7 +64,7 @@ class _DetailsState extends State<Details> {
                 height: 15,
               ),
               Text(
-                "\$ 12.99",
+                "\$ ${widget.product.price}",
                 style: TextStyle(fontSize: 30),
               ),
               SizedBox(
@@ -130,7 +130,7 @@ class _DetailsState extends State<Details> {
                         width: 3,
                       ),
                       Text(
-                        "Flower Shop",
+                        widget.product.location,
                         style: TextStyle(fontSize: 19),
                       ),
                     ],
